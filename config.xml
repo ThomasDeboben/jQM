@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.traeg.phonegap.FastTip" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>PG3FasTip</name>
+<widget id="org.traeg.phonegap.FastTip" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>jQMDemo</name>
     <description>
-        PhoneGap 3 Version of the FasTip application
+        jQM Demo for PhoneGap 3
     </description>
     <author email="ptraeg@yahoo.com" href="http://traeg.org">
-        Peter Traeg
+        TSDN
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="orientation" value="default" />
