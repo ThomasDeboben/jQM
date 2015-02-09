@@ -1,49 +1,4 @@
 (function( $, undefined ) {
-	$( document ).on( "mobileinit", function(){
-		$.widget( "mobile.listview", $.mobile.listview, {
-			options: {
-				theme: null,
-				countTheme: "c",
-				headerTheme: "b",
-				dividerTheme: "b",
-				icon: "arrow-r",
-				splitIcon: "arrow-r",
-				splitTheme: "b",
-				corners: true,
-				shadow: true,
-				inset: false,
-				initSelector: ":jqmData(role='listview')",
-				globalNav: false
-			},
-			_create: function(){
-				this._super();
-				if ( this.options.globalNav ){
-					this._globalnav();
-				}
-			},
-			_globalnav: function() {
-				var version, base,
-					parts = $( "base" ).attr( "href" ).split( "/" ),
-					versionString = /^[0-9]\.[0-9]\.[0-9]/;
-
-				parts.forEach( function( part ){
-					if ( versionString.test( part ) ){
-						base = $( "base" ).attr( "href" )
-							.split( part )[ 0 ]
-							.split( "index.html" )[0] + part + "/";
-					}
-				});
-
-				this.element.find( "a" ).each( function() {
-					var href = base + $( this ).attr( "href" );
-					$( this ).attr( "href", href );
-				});
-			}
-		});
-	});
-})( jQuery );
-
-(function( $, undefined ) {
 	//special click handling to make widget work remove after nav changes in 1.4
 	var href,
 		ele = "";
@@ -81,6 +36,7 @@
 			hash !== "" &&
 			hashEl.length > 0 &&
 			!hashEl.hasClass( "ui-page" ) &&
+			!hashEl.hasClass( "ui-popup" ) &&
 			hashEl.data('role') !== "page" &&
 			!hashElInPage.hasClass( "ui-panel" ) &&
 			!hashElInPage.hasClass( "ui-popup" ) ) {
@@ -146,7 +102,7 @@
 	});
 	//h2 widget
 	$( document ).on( "mobileinit", function(){
-		$.widget( "mobile.h2linker", $.mobile.widget, {
+		$.widget( "mobile.h2linker", {
 			options:{
 				initSelector: ":jqmData(quicklinks='true')"
 			},
@@ -154,7 +110,7 @@
 			_create:function(){
 				var self = this,
 					bodyid = "ui-page-top",
-					panel = "<div data-role='panel' class='jqm-nav-panel jqm-quicklink-panel' data-position='right' data-display='overlay' data-theme='c'><ul data-role='listview' data-inset='false' data-theme='d' data-divider-theme='d' data-icon='false' class='jqm-list'><li data-role='list-divider'>Jump to section</li></ul></div>",
+					panel = "<div data-role='panel' class='jqm-nav-panel jqm-quicklink-panel' data-position='right' data-display='overlay' data-theme='a'><ul data-role='listview' data-inset='false' data-theme='a' data-divider-theme='a' data-icon='false' class='jqm-list'><li data-role='list-divider'>Quick Links</li></ul></div>",
 					first = true,
 					h2dictionary = new Object();
 					if(typeof $("body").attr("id") === "undefined"){
@@ -164,7 +120,7 @@
 					}
 					this.element.find("div.jqm-content>h2").each(function(){
 						var id, text = $(this).text();
-						
+
 						if(typeof $(this).attr("id") === "undefined"){
 							id = text.replace(/[^\.a-z0-9:_-]+/gi,"");
 							$(this).attr( "id", id );
@@ -174,9 +130,9 @@
 
 						h2dictionary[id] =  text;
 						if(!first){
-							$(this).before( "<a href='#" + bodyid + "' class='jqm-deeplink ui-link'>Return to top<span class='ui-icon ui-icon-arrow-u'>&nbsp;</span></a>");
+							$(this).before( "<a href='#" + bodyid + "' class='jqm-deeplink ui-icon-carat-u ui-alt-icon'>Top</a>");
 						} else {
-							$(this).before("<a href='#' data-ajax='false' class='jqm-deeplink ui-link jqm-open-quicklink-panel'>Jump to section<span class='ui-icon ui-icon-bars'>&nbsp;</span></a>");
+							$(this).before("<a href='#' data-ajax='false' class='jqm-deeplink jqm-open-quicklink-panel ui-icon-carat-l ui-alt-icon'>Quick Links</a>");
 						}
 						first = false;
 					});
@@ -201,7 +157,6 @@
 					});
 					self.element.find(".jqm-quicklink-panel ul").listview("refresh");
 
-
 			}
 		});
 	});
@@ -213,7 +168,7 @@
 	});
 })( jQuery );
 
-// Turn off AJAX for local file browsing
+// Turn off Ajax for local file browsing
 if ( location.protocol.substr(0,4)  === 'file' ||
      location.protocol.substr(0,11) === '*-extension' ||
      location.protocol.substr(0,6)  === 'widget' ) {
@@ -231,7 +186,7 @@ if ( location.protocol.substr(0,4)  === 'file' ||
 	$( fixLinks );
 
 	// Fix the links for subsequent ajax page loads
-	$( document ).on( 'pagecreate', fixLinks );
+	$( document ).on( "pagecreate", fixLinks );
 
 	// Check to see if ajax can be used. This does a quick ajax request and blocks the page until its done
 	$.ajax({
@@ -242,17 +197,17 @@ if ( location.protocol.substr(0,4)  === 'file' ||
 		// Ajax doesn't work so turn it off
 		$( document ).on( "mobileinit", function() {
 			$.mobile.ajaxEnabled = false;
-			
+
 			var message = $( '<div>' , {
-				'class': "jqm-content jqm-fullwidth ui-bar-f",
+				'class': "jqm-content",
 				style: "border:none; padding: 10px 15px; overflow: auto;",
 				'data-ajax-warning': true
 			});
-			
-			message
-			.append( "<h3 style='margin:0 0 .3em; padding:0; font-size:1em; font-weight: bold; color:#fff;'>Note: Navigation may not work if viewed locally</h3>" )
-			.append( "<p style='margin:0; font-size:.9em; color:#fff;'>The AJAX-based navigation used throughout the jQuery Mobile docs may need to be viewed on a web server to work in certain browsers. If you see an error message when you click a link, try a different browser or <a href='https://github.com/jquery/jquery-mobile/wiki/Downloadable-Docs-Help' style='color:white'>view help</a>.</p>" );
-			
+
+			// message
+			// .append( "<h3>Note: Navigation may not work if viewed locally</h3>" )
+			// .append( "<p>The Ajax-based navigation used throughout the jQuery Mobile docs may need to be viewed on a web server to work in certain browsers. If you see an error message when you click a link, please try a different browser.</p>" );
+
 			$( document ).on( "pagecreate", function( event ) {
 				$( event.target ).append( message );
 			});
@@ -260,15 +215,19 @@ if ( location.protocol.substr(0,4)  === 'file' ||
 	});
 }
 
-
-// display the version of jQM
-$( document ).on( "pageinit", function() {
-	var version = $.mobile.version || "dev",
+$( document ).on( "pagecreate", ".jqm-demos", function( event ) {
+	var search,
+		page = $( this ),
+		that = this,
+		searchUrl = ( $( this ).hasClass( "jqm-home" ) ) ? "_search/" : "../_search/",
+		searchContents = $( ".jqm-search ul.jqm-list" ).find( "li:not(.ui-collapsible)" ),
+		version = $.mobile.version || "dev",
 		words = version.split( "-" ),
 		ver = words[0],
 		str = words[1] || "",
 		text = ver;
 
+	// Insert jqm version in header
 	if ( str.indexOf( "rc" ) == -1 ) {
 		str = str.charAt( 0 ).toUpperCase() + str.slice( 1 );
 	} else {
@@ -279,96 +238,84 @@ $( document ).on( "pageinit", function() {
 		text += " " + str;
 	}
 
-	$( ".jqm-version" ).html( "Version " + text );
-	$( ".jqm-version-number" ).html( text );
-});
+	$( ".jqm-version" ).html( text );
 
+	// Global navmenu panel
+	$( ".jqm-navmenu-panel ul" ).listview();
 
-$( document ).on( "pageinit", ".jqm-demos", function() {
-	var page = $( this );
+	$( document ).on( "panelopen", ".jqm-search-panel", function() {
+		$( this ).find( "input" ).focus();
+	})
 
-	// global navmenu panel
 	$( ".jqm-navmenu-link" ).on( "click", function() {
-		page.find( ".jqm-navmenu-panel" ).panel( "open" );
+		page.find( ".jqm-navmenu-panel:not(.jqm-panel-page-nav)" ).panel( "open" );
 	});
 
-	// global search
-	$( this ).find( ".jqm-search ul.jqm-list" ).listview({
-		globalNav: "demos",
-		inset: true,
-		theme: "d",
-		dividerTheme: "d",
+	// Turn off autocomplete / correct for demos search
+	$( this ).find( ".jqm-search input" ).attr( "autocomplete", "off" ).attr( "autocorrect", "off" );
+
+	// Global search
+	$( ".jqm-search-link" ).on( "click", function() {
+		page.find( ".jqm-search-panel" ).panel( "open" );
+	});
+
+	// Initalize search panel list and filter also remove collapsibles
+	$( this ).find( ".jqm-search ul.jqm-list" ).html( searchContents ).listview({
+		inset: false,
+		theme: null,
+		dividerTheme: null,
 		icon: false,
-		filter: true,
-		filterReveal: true,
-		filterPlaceholder: "Search...",
 		autodividers: true,
 		autodividersSelector: function ( li ) {
-    		return "";
-  		},
-  		arrowKeyNav: true,
-  		enterToNav: true,
-  		highlight: true,
-  		submitTo: "search-results.php"
-	});
-	
-	$( this ).find( ".jqm-header .jqm-search-link" ).on( "click", function() {
-		$( this ).parent( ".jqm-header" ).toggleClass( "jqm-search-toggle" );
-		
-		var type = $( this ).parent( ".jqm-header" ).hasClass( "jqm-search-toggle" ) ? "searchshow" : "searchhide";
-		
-		$( this ).parent( ".jqm-header" ).find( ".jqm-search" ).trigger( type );
-	});
-	
-	$( this ).find( ".jqm-header .jqm-search" )
-		.on( "searchshow searchhide", function( event ) {
-			if ( event.type === "searchshow" ) {
-				$( this ).find( ".ui-input-text" ).focus();
-			} else {
-				$( this )
-					.find( ".ui-input-clear" ).trigger( "click" )
-					.end()
-					.find( ".ui-input-text" ).blur();
-			}
-		});
-		
-	$( this ).on( "pagehide", function() {
-		$( this ).find( ".jqm-search .ui-input-clear" ).trigger( "click" );
-	});
+			return "";
+		},
+		arrowKeyNav: true,
+		enterToNav: true,
+		highlight: true,
+		submitTo: searchUrl
+	}).filterable();
 
-	$( this ).find( ".jqm-content ul.jqm-list " ).listview({
-		globalNav: "demos",
+	// Initalize search page list and remove collapsibles
+	$( this ).find( ".jqm-search-results-wrap ul.jqm-list" ).html( searchContents ).listview({
 		inset: true,
-		theme: "d",
-		dividerTheme: "d",
+		theme: null,
+		dividerTheme: null,
 		icon: false,
-		filter: true,
-		filterReveal: true,
-		filterPlaceholder: "Search...",
-  		arrowKeyNav: true,
-  		enterToNav: true,
-  		highlight: true
-	});
+		arrowKeyNav: true,
+		enterToNav: true,
+		highlight: true
+	}).filterable();
 
+	// Fix links on homepage to point to sub directories
+	if ( $( event.target ).hasClass( "jqm-home") ) {
+		$( this ).find( "a" ).each( function() {
+			$( this ).attr( "href", $( this ).attr( "href" ).replace( "../", "" ) );
+		});
+	}
+
+	// Search results page get search query string and enter it into filter then trigger keyup to filter
+	if ( $( event.target ).hasClass( "jqm-demos-search-results") ) {
+		search = $.mobile.path.parseUrl( window.location.href ).search.split( "=" )[ 1 ];
+		setTimeout(function() {
+			e = $.Event( "keyup" );
+			e.which = 65;
+			$( that ).find( ".jqm-content .jqm-search-results-wrap input" ).val( search ).trigger(e).trigger( "change" );
+		}, 0 );
+	}
+});
+
+// Append keywords list to each list item
+$( document ).one( "pagecreate", ".jqm-demos", function( event ) {
 	$( this ).find( ".jqm-search-results-list li, .jqm-search li" ).each(function() {
 		var text = $( this ).attr( "data-filtertext" );
-		$( this ).find( "a" ).append( "<span class='jqm-search-results-keywords ui-li-desc'><span class='jqm-keyword-hash'>//</span> " + text + "</span>" );
+
+		$( this )
+			.find( "a" )
+			.append( "<span class='jqm-search-results-keywords ui-li-desc'>" + text + "</span>" );
 	});
 });
 
-$( document ).on( "pageshow",  ".jqm-demos", function() {
-	$( this ).find( ".jqm-search input" ).attr( "autocomplete", "off" ).attr( "autocorrect", "off" );
-});
-
-$( document ).on( "pageshow", ".jqm-demos-search-results", function() {
-	var search = $.mobile.path.parseUrl( window.location.href ).search.split( "=" )[1], self = this;
-	setTimeout(function() {
-		e = $.Event( "keyup" );
-		e.which = 65;
-		$( self ).find( ".jqm-content .jqm-search-results-wrap input" ).val( search ).trigger(e).trigger( "change" );
-	}, 0 );
-});
-
+// Functions for highlighting text used for keywords highlight in search
 jQuery.fn.highlight = function( pat ) {
 	function innerHighlight( node, pat ) {
 		var skip = 0;
@@ -396,6 +343,7 @@ jQuery.fn.highlight = function( pat ) {
 	}) : this;
 };
 
+// Function to remove highlights in text
 jQuery.fn.removeHighlight = function() {
 	return this.find( "span.jqm-search-results-highlight" ).each(function() {
 		this.parentNode.firstChild.nodeName;
@@ -406,22 +354,12 @@ jQuery.fn.removeHighlight = function() {
 	}).end();
 };
 
+// Extension to listview to add keyboard navigation
 $( document ).on( "mobileinit", function() {
 	(function( $, undefined ) {
 
 	$.widget( "mobile.listview", $.mobile.listview, {
 		options: {
-			theme: null,
-			countTheme: "c",
-			headerTheme: "b",
-			dividerTheme: "b",
-			icon: "arrow-r",
-			splitIcon: "arrow-r",
-			splitTheme: "b",
-			corners: true,
-			shadow: true,
-			inset: false,
-			initSelector: ":jqmData(role='listview')",
 			arrowKeyNav: false,
 			enterToNav: false,
 			highlight: false,
@@ -429,78 +367,79 @@ $( document ).on( "mobileinit", function() {
 		},
 		_create: function() {
 			this._super();
-			
+
 			if ( this.options.arrowKeyNav ) {
 				this._on( document, { "pageshow": "arrowKeyNav" });
 			}
-			
+
 			if ( this.options.enterToNav ) {
 				this._on( document, { "pageshow": "enterToNav" });
 			}
-			
+
 		},
 		submitTo: function() {
-			var form = this.element.parent().find( "form" );
-			
+			var url,
+				form = this.element.parent().find( "form" );
+
 			form.attr( "method", "get" )
 				.attr( "action", this.options.submitTo );
-				
-			var base = $( "base" ).attr( "href" ).split( "demos" )[0];
-				base = base.split( "index.html" )[0] + "demos" + "/";
-				url = base + this.options.submitTo + "?search=" + this.element.parent().find( "input" ).val();
-			
-			$.mobile.changePage( url ); 
+
+			url = this.options.submitTo + "?search=" + this.element.parent().find( "input" ).val();
+
+			window.location =  url;
 		},
 		enterToNav: function() {
 			var form = this.element.parent().find( "form" );
-			
-			form.append( "<button type='submit' data-icon='arrow-r' data-inline='true' class='ui-hidden-accessible' data-iconpos='notext'>Submit</button>" )
+
+			form.append( "<button type='submit' data-icon='carat-r' data-inline='true' class='ui-hidden-accessible' data-iconpos='notext'>Submit</button>" )
 				.parent()
 				.trigger( "create" );
-			
+
 			this.element.parent().find( "form" ).children( ".ui-btn" ).addClass( "ui-hidden-accessible" );
-			
+
 			this._on( form, {
 				"submit": "submitHandler"
 			});
 		},
 		enhanced: false,
 		arrowKeyNav: function() {
-			var input = this.element.parent().find( "input" );
-			
+			var input = this.element.prev("form").find( "input" );
+
 			if ( !this.enhanced ) {
 				this._on( input, {
 					"keyup": "handleKeyUp"
 				});
-				
+
 				this.enhanced = true;
 			}
 		},
 		handleKeyUp: function( e ) {
-			var input = this.element.parent().find( "input" );
-			
-			if ( e.which === $.mobile.keyCode.DOWN ) {
-				if ( this.element.find( "li.ui-btn-active" ).length == 0 ) {
-					this.element.find( "li:first" ).toggleClass( "ui-btn-active" );
+			var search,
+				input = this.element.prev("form").find( "input" );
+
+			if ( e.which === $.ui.keyCode.DOWN ) {
+				if ( this.element.find( "li.ui-btn-active" ).length === 0 ) {
+					this.element.find( "li:first" ).toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				} else {
-					this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).next().toggleClass( "ui-btn-active" );
+					this.element.find( "li.ui-btn-active a" ).toggleClass( "ui-btn-active");
+					this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).next().toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				}
-				
+
 				this.highlightDown();
-			} else if ( e.which === $.mobile.keyCode.UP ) {
+			} else if ( e.which === $.ui.keyCode.UP ) {
 				if ( this.element.find( "li.ui-btn-active" ).length !== 0 ) {
-					this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).prev().toggleClass( "ui-btn-active" );
-					
-					this.highlightUp()
+					this.element.find( "li.ui-btn-active a" ).toggleClass( "ui-btn-active");
+					this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).prev().toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				} else {
-					this.element.find( "li:last" ).toggleClass( "ui-btn-up-d" ).toggleClass( "ui-btn-active" );
+					this.element.find( "li:last" ).toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				}
+				this.highlightUp();
 			} else if ( typeof e.which !== "undefined" ) {
 				this.element.find( "li.ui-btn-active" ).removeClass( "ui-btn-active" );
-				
+
 				if ( this.options.highlight ) {
-					var search = input.val();
-					
+					search = input.val();
+
 					this.element.find( "li" ).each(function() {
 						$( this ).removeHighlight();
 						$( this ).highlight( search );
@@ -511,27 +450,27 @@ $( document ).on( "mobileinit", function() {
 		submitHandler: function() {
 			if ( this.element.find( "li.ui-btn-active" ).length !== 0 ) {
 				var href = this.element.find( "li.ui-btn-active a" ).attr( "href" );
-				
-				$.mobile.changePage( href );
+
+				$( ":mobile-pagecontainer" ).pagecontainer( "change", href );
 				return false;
 			}
-			
+
 			if ( this.options.submitTo ) {
 				this.submitTo();
 			}
 		},
 		highlightDown: function() {
 			if ( this.element.find( "li.ui-btn-active" ).hasClass( "ui-screen-hidden" ) ) {
-				this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).next().toggleClass( "ui-btn-active" );
-				
+				this.element.find( "li.ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
+				this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).next().toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				this.highlightDown();
 			}
 			return;
 		},
 		highlightUp: function() {
 			if ( this.element.find( "li.ui-btn-active" ).hasClass( "ui-screen-hidden" ) ) {
-				this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).prev().toggleClass( "ui-btn-active" );
-				
+				this.element.find( "li.ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
+				this.element.find( "li.ui-btn-active" ).toggleClass( "ui-btn-active" ).prev().toggleClass( "ui-btn-active" ).find("a").toggleClass( "ui-btn-active" );
 				this.highlightUp();
 			}
 			return;
@@ -546,17 +485,34 @@ $( document ).on( "mobileinit", function() {
 function attachPopupHandler( popup, sources ) {
 	popup.one( "popupbeforeposition", function() {
 		var
-			collapsibleSet = popup.find( "[data-role='collapsible-set']" ),
+			collapsibleSet = popup.find( "[data-role='collapsibleset']" ),
 			collapsible, pre;
 
 		$.each( sources, function( idx, options ) {
-			collapsible = $( "<div data-role='collapsible' data-collapsed='true' data-theme='" + options.theme + "' data-iconpos='right' data-collapsed-icon='arrow-l' data-expanded-icon='arrow-d' data-content-theme='a'>" +
+			collapsible = $( "<div data-role='collapsible' data-collapsed='true' data-theme='" + options.theme + "' data-iconpos='right' data-collapsed-icon='carat-l' data-expanded-icon='carat-d' data-content-theme='b'>" +
 					"<h1>" + options.title + "</h1>" +
 					"<pre class='brush: " + options.brush + ";'></pre>" +
 				"</div>" );
 			pre = collapsible.find( "pre" );
 			pre.append( options.data.replace( /</gmi, '&lt;' ) );
-			collapsible.appendTo( collapsibleSet );
+			collapsible
+				.appendTo( collapsibleSet )
+				.on( "collapsiblecollapse", function() {
+					popup.popup( "reposition", { positionTo: "window" } );
+				})
+				.on( "collapsibleexpand", function() {
+					var doReposition = true;
+
+					collapsibleSet.find( ":mobile-collapsible" ).not( this ).each( function() {
+						if ( $( this ).collapsible( "option", "expanded" ) ) {
+							doReposition = false;
+						}
+					});
+
+					if ( doReposition ) {
+						popup.popup( "reposition", { positionTo: "window" } );
+					}
+				});
 			SyntaxHighlighter.highlight( {}, pre[ 0 ] );
 		});
 
@@ -565,7 +521,7 @@ function attachPopupHandler( popup, sources ) {
 	});
 }
 
-function getHeadSnippet( type, selector ) {
+function getSnippet( type, selector, source ) {
 	var text = "", el, absUrl, hash;
 
 	if ( selector === "true" ) {
@@ -574,10 +530,10 @@ function getHeadSnippet( type, selector ) {
 
 	// First, try to grab a tag in this document
 	if ( !$.mobile.path.isPath( selector ) ) {
-		el = $( "head" ).find( type + selector );
+		el = source.find( type + selector );
 		// If this is not an embedded style, try a stylesheet reference
 		if ( el.length === 0 && type === "style" ) {
-			el = $( "head" ).find( "link[rel='stylesheet']" + selector );
+			el = source.find( "link[rel='stylesheet']" + selector );
 		}
 		text = $( "<div></div>" ).append( el.contents().clone() ).html();
 		if ( !text ) {
@@ -612,7 +568,7 @@ $( document ).bind( "pagebeforechange", function( e, data ) {
 		sources = data.options.link.jqmData( "sources" );
 		if ( sources ) {
 			popup = $( "<div id='jqm-view-source' class='jqm-view-source' data-role='popup' data-theme='none' data-position-to='window'>" +
-								"<div data-role='collapsible-set' data-inset='true'></div>" +
+								"<div data-role='collapsibleset' data-inset='true'></div>" +
 							"</div>" );
 
 			attachPopupHandler( popup, sources );
@@ -631,18 +587,14 @@ $( document ).bind( "pagebeforechange", function( e, data ) {
 
 function makeButton() {
 	var d = document.createElement( "div" )
-		a = document.createElement( "a" );
+		a = document.createElement( "a" ),
+		txt = document.createTextNode( "View Source" );
 
-	d.className = "jqm-view-source-link";
+	a.className = "jqm-view-source-link ui-btn ui-corner-all ui-btn-inline ui-mini";
 
 	a.setAttribute( "href", "#popupDemo" );
 	a.setAttribute( "data-rel", "popup" );
-	a.setAttribute( "data-role", "button" );
-	a.setAttribute( "data-icon", "arrow-u" );
-	a.setAttribute( "data-mini", "true" );
-	a.setAttribute( "data-inline", "true" );
-	a.setAttribute( "data-shadow", "false" );
-	a.innerHTML = "View Source";
+	a.appendChild( txt );
 
 	d.appendChild( a );
 
@@ -653,7 +605,7 @@ $.fn.viewSourceCode = function() {
 	return $( this ).each( function() {
 		var button = makeButton(),
 			self = $( this ),
-			page = self.closest( "[data-role='page']" ),
+			snippetSource = self.parents( ".ui-page,:jqmData(role='page')" ).add( $( "head" ) ),
 			fixData = function( data ) {
 				return data.replace( /\s+$/gm, "" );
 			},
@@ -668,7 +620,7 @@ $.fn.viewSourceCode = function() {
 			} else {
 				data = $( "<div></div>" ).append( $( self.attr( "data-demo-html" ) ).clone() ).html();
 			}
-			sources.push( { title: "HTML", theme: "b", brush: "xml", data: fixData( data ) } );
+			sources.push( { title: "HTML", theme: "c", brush: "xml", data: fixData( data ) } );
 		}
 
 		if ( self.is( "[data-demo-php]" ) ) {
@@ -684,13 +636,13 @@ $.fn.viewSourceCode = function() {
 		}
 
 		if ( self.is( "[data-demo-js]" ) ) {
-			data = getHeadSnippet( "script", self.attr( "data-demo-js" ) );
-			sources.push( { title: "JS", theme: "f", brush: "js", data: fixData( data ) } );
+			data = getSnippet( "script", self.attr( "data-demo-js" ), snippetSource );
+			sources.push( { title: "JS", theme: "e", brush: "js", data: fixData( data ) } );
 		}
 
 		if ( self.is( "[data-demo-css]" ) ) {
-			data = getHeadSnippet( "style", self.attr( "data-demo-css" ) );
-			sources.push( { title: "CSS", theme: "e", brush: "css", data: fixData( data ) } );
+			data = getSnippet( "style", self.attr( "data-demo-css" ), snippetSource );
+			sources.push( { title: "CSS", theme: "f", brush: "css", data: fixData( data ) } );
 		}
 
 		button.insertAfter( this );
@@ -699,12 +651,12 @@ $.fn.viewSourceCode = function() {
 };
 
 $( document ).on( "pagebeforecreate", "[data-role='page']", function() {
-	$( this ).find( "[data-demo-html='true'], [data-demo-js], [data-demo-css], [data-demo-php]" ).viewSourceCode();
+	$( this ).find( "[data-demo-html], [data-demo-js], [data-demo-css], [data-demo-php]" ).viewSourceCode();
 	SyntaxHighlighter.defaults['toolbar'] = false;
 	SyntaxHighlighter.defaults['auto-links'] = false;
 });
 
-$( document ).on( "pageinit", function( e ) {
+$( document ).on( "pagecreate", function( e ) {
 	// prevent page scroll while scrolling source code
 	$( document ).on( "mousewheel", ".jqm-view-source .ui-collapsible-content", function( event, delta ) {
 		if ( delta > 0 && $( this ).scrollTop() === 0 ) {
@@ -713,7 +665,7 @@ $( document ).on( "pageinit", function( e ) {
 			event.preventDefault();
 		}
 	});
-	
+
 	// reposition when switching between html / js / css
 	$( e.target ).delegate( ".jqm-view-source .ui-collapsible", "expand", function() {
 		$( this ).parents( ":mobile-popup" ).popup( "reposition", { positionTo: "window" } );
@@ -999,7 +951,6 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 	// CommonJS
 	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
 })();
-
 
 /*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
