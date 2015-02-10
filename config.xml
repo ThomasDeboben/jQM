@@ -1,11 +1,11 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.exakid" version="1.1.0" xmlns="http://www.w3.org/ns/widgets"
+<widget id="com.phonegap.tsdndemo" version="1.1.0" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>
-        jQM Demo
+        tsdn Demo
     </name>
     <description>
-        jQM Demo.
+        tsdn Demo.
     </description>
     <author email="thomas@deboben.de">
         TSDN
