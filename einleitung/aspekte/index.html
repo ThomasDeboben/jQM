@@ -16,7 +16,7 @@
 
 <div data-role="page" id="exakid-page" data-theme="d">
 
-    <div data-role="header" data-theme="c">
+    <div data-role="header" data-theme="c" data-position="fixed">
         <h1>ExaKid</h1>
 		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
     </div><!-- /header -->
@@ -25,17 +25,23 @@
         <h1>Klinische Aspekte</h1>
 
 		<p>Aus &auml;rztlicher Sicht ergeben sich mehrere Aspekte:<br>
-		<blockquote>Wie ist der Allgemeinzustandes des Kindes?<br>
-		Ist eine Krankenhauseinweisung notwendig oder ist eine h&auml;usliche Pflege ausreichend?<br>
-		Besteht eine unmittelbare Ansteckungsgefahr, sind Kontaktpersonen zu informieren oder sind u.U. 
-		seuchenhygienische Gesichtspunkte zu beachten.
-        </blockquote>
+		<div>
+		  <ul data-role="listview" data-inset="true">
+		   <li>Wie ist der Allgemeinzustandes des Kindes?</li>
+		   <li>Ist eine Krankenhauseinweisung notwendig oder ist eine h&auml;usliche Pflege ausreichend?</li>
+		   <li>Besteht eine unmittelbare Ansteckungsgefahr, sind Kontaktpersonen zu informieren oder sind u.U. 
+		       seuchenhygienische Gesichtspunkte zu beachten?</li>
+		  </ul>
+		</div><br>
 		Weiter gilt es, die korrekte Behandlung einzuleiten. Dazu m&uuml;ssen wir wissen:
-		<blockquote>Handelt es sich um eine Virusinfektion?<br>
-		Liegt eine bakteriell verursachte Erkrankung vor? <br>
-		Ist es eher eine infektallergische Ursache, eine erblich bedingte Hauterkrankung oder gar eine 
-		selbstzugef&uuml;gte Hautverletzung.
-		</blockquote>
+		<div>
+		  <ul data-role="listview" data-inset="true">
+		   <li>Handelt es sich um eine Virusinfektion?</li>
+		   <li>Liegt eine bakteriell verursachte Erkrankung vor?</li>
+		   <li>Ist es eher eine infektallergische Ursache, eine erblich bedingte Hauterkrankung oder gar eine 
+		       selbstzugef&uuml;gte Hautverletzung?</li>
+		  </ul>
+		</div><br>
 		Liegt eine Virusinfektion vor (z.B. Masern, Windpocken, Ringelr&ouml;teln, Hand-Fu&szlig;-Mund- Erkrankung, 
 		herpes simplex u.a.) ist die Gabe eines Antibiotikums nicht angezeigt, ja sogar sch&auml;dlich, 
 		weil unn&ouml;tige und zunehmend neue antibiotika-resistente Keime so gez&uuml;chtet werden. Die ungezielte 
@@ -48,15 +54,15 @@
 
     <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
 		<ul data-role="listview">
-		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../../">Home</a></li>
-		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./../../einleitung/haut/" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../../einleitung/exanthem/" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li data-filtertext="Primäreffloreszenzen"><a href="./../../einleitung/primaer/" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./../../einleitung/sekundaer/" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Klinische Aspekte"><a href="./../../einleitung/aspekte/" data-ajax="false">Klinische Aspekte</a></li>
-		   <li data-filtertext="Klinische Befunde"><a href="./../../einleitung/befunde/" data-ajax="false">Klinische Befunde</a></li>
-		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../../einleitung/verantwortung/" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		   <li data-filtertext="Erkrankungen"><a href="./../../artikel/" data-ajax="false">Erkrankungen</a></li>
+		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../../index.html">Home</a></li>
+		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+		   <li data-filtertext="Primäreffloreszenzen"><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Klinische Aspekte"><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+		   <li data-filtertext="Klinische Befunde"><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+		   <li data-filtertext="Erkrankungen"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
 		</ul>
 
     </div><!-- /panel -->
