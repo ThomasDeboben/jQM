@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ExaKid Mobile</title>
-	<link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="../../css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="../../_assets/css/jqm-demos.css">
-	<script src="../../js/jquery.js"></script>
-	<script src="../../_assets/js/index.js"></script>
-	<script src="../../js/jquery.mobile-1.4.5.min.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExaKid</title>
+	<link rel="stylesheet"  href="./../../css/themes/default/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet"  href="./../../css/exakid.css">
+	<link rel="shortcut icon" href="./../../favicon.ico">
+	<script src="./../../js/jquery.js"></script>
+	<script src="./../../_assets/js/index.js"></script>
+	<script src="./../../js/jquery.mobile-1.3.2.min.js"></script>
+	<script src="./../../js/exakid.js"></script>
+  </head>
 <body>
-<div data-role="page" class="jqm-demos" data-quicklinks="false">
 
-	<div data-role="header" class="jqm-header">
-		<h1><a href="../../" title="ExaKid"></a></h1>
-		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Men&uuml;</a>
-		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Suchen</a>
-	</div><!-- /header -->
+<div data-role="page" id="exakid-page" data-theme="d">
+    <div data-role="header" data-theme="c" data-position="fixed">
+        <h1>ExaKid</h1>
+		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+    </div><!-- /header -->
 
-	<div role="main" class="ui-content jqm-content">
+    <div data-role="content">
 		<h1>Toxische epidermale Nekrolyse<br>
 		Lyell - Syndrom</h1>
 
@@ -31,31 +30,24 @@
 		Bei letzteren besteht definitionsgemäß eine Hautbeteiligung von über 30%.
 		Das Risiko einer TEN ist zwischem dem 4.und 28. Tag nach Beginn einer medikamentösen Therapie am höchsten.</p>
 
-
         <p><blockquote><span> Differenzialdiagnose:</span><br>
 		  Andere bullöse Erkrankungen, insbesondere SSSS (Staphylococcal scalded skin syndrome)
 		</blockquote></p>
 	</div><!-- /content -->
 	
-    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-		   <li data-filtertext="ExaKid, die Haut erbl&uuml;ht bei verschiedensten Krankheiten" data-icon="home"><a href="../.././">&Uuml;bersicht</a></li>
-		   <li data-filtertext="Erkrankungen"><a href="../../artikel/" data-ajax="false">Erkrankungen</a></li>
-	     </ul>
-	</div><!-- /panel -->
-
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
-		<p>Copyright&copy; 2015 - Dr. Thomas Rautenstrauch</p>
-	</div><!-- /footer -->
-
-    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="overlay" data-theme="a">
-		<div class="jqm-search">
-			<ul class="jqm-list" data-filter-placeholder="Search demos..." data-filter-reveal="true">
-               <li data-filtertext="ExaKid, die Haut erbl&uuml;ht bei verschiedensten Krankheiten" data-icon="home"><a href="../.././">&Uuml;bersicht</a></li>
-               <li data-filtertext="Die Haut unser gr&ouml;ßtes Organ"><a href="../../einleitung/haut/" data-ajax="false">Die Haut</a></li>
-		       <li data-filtertext="Erkrankungen alphabetisch sortiert"><a href="../../artikel/" data-ajax="false">Erkrankungen</a></li>
-			</ul>
-		</div>
-	</div><!-- /panel --></div><!-- /page -->
+    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
+		<ul data-role="listview">
+		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../../index.html">Home</a></li>
+		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+		   <li data-filtertext="Primäreffloreszenzen"><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Klinische Aspekte"><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+		   <li data-filtertext="Klinische Befunde"><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+		   <li data-filtertext="Erkrankungen"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		</ul>
+    </div><!-- /panel -->
+</div><!-- /page -->
 </body>
 </html>
