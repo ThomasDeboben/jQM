@@ -15,10 +15,11 @@
 <body>
 
 <div data-role="page" id="exakid-page" data-theme="d">
-    <div data-role="header" data-theme="c" data-position="fixed">
+    <div data-role="header" data-theme="b" data-position="fixed">
         <h1>ExaKid</h1>
-		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
     </div><!-- /header -->
+
 
     <div data-role="content">
 		<h1>Arzneimittelexanthem<br>
@@ -31,71 +32,76 @@
 		Bei einem Pfeiffer'schen Dr&uuml;senfieber ist die Exanthemrate deutlich erh&ouml;ht, (bis zu 100%) der Verlauf 
 		meist schwerer.</p>
 
-		<h2>Bilder</h2>
 		<div>
+		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
+		    <li data-role="list-divider"><br></li>
+            <li data-role="list-divider" data-icon="false">
+			<div align="center">
 			<a href="#popup1" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image1s.jpg" alt="Bild 1" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/artikel/ampiz/image1s.jpg" alt="Bild 1" style="width:32%;"></a>
 			<a href="#popup2" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image2s.jpg" alt="Bild 2" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/artikel/ampiz/image2s.jpg" alt="Bild 2" style="width:32%;"></a>
 			<a href="#popup3" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image3s.jpg" alt="Bild 3" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/artikel/ampiz/image3s.jpg" alt="Bild 3" style="width:32%;"></a>
             <br>                                                                                                                                                                 
 			<a href="#popup4" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image4s.jpg" alt="Bild 4" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/artikel/ampiz/image4s.jpg" alt="Bild 4" style="width:32%;"></a>
 			<a href="#popup5" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image5s.jpg" alt="Bild 5" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/artikel/ampiz/image5s.jpg" alt="Bild 5" style="width:32%;"></a>
 			<a href="#popup6" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/ampiz/image6s.jpg" alt="Bild 6" style="width:30%;max-width:150px;"></a>
-
-			<div data-role="popup" id="popup1" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<img class="popphoto" src="../../images/artikel/ampiz/image6s.jpg" alt="Bild 6" style="width:32%;"></a>
+			</div></li>
+		  
+			<div data-role="popup" id="popup1" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image1.jpg" style="width:100%;" alt="Bild 1">
 				<p>Exanthem auf Cotrim</p>
 			</div>
-			<div data-role="popup" id="popup2" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<div data-role="popup" id="popup2" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image2.jpg" style="width:100%;" alt="Bild 2">
 				<p>Exanthem auf Ampizillin</p>
 			</div>
-			<div data-role="popup" id="popup3" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<div data-role="popup" id="popup3" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image3.jpg" style="width:100%;" alt="Bild 3">
 				<p>Exanthem auf Ampizillin</p>
 			</div>
-			<div data-role="popup" id="popup4" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<div data-role="popup" id="popup4" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image4.jpg" style="width:100%;" alt="Bild 4">
 				<p>Exanthem auf Ampizillin</p>
 			</div>
-			<div data-role="popup" id="popup5" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<div data-role="popup" id="popup5" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image5.jpg" style="width:100%;" alt="Bild 5">
 				<p>Exanthem auf Ampizillin</p>
 			</div>
-			<div data-role="popup" id="popup6" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			<div data-role="popup" id="popup6" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
 				<img class="popphoto" src="../../images/artikel/ampiz/image6.jpg" style="width:100%;" alt="Bild 6">
 				<p>Exanthem auf Ampizillin</p>
 			</div>
+            <li data-role="list-divider">Exanthem auf Cotrim und Ampizillin</li>
+          </ul>
 		</div><!--/demo-html -->
-		<p>Exanthem auf Cotrim und Ampizillin</p>
 
         <p>Auch wenn das exanthem-ausl&ouml;sende Antibiotikum weitergegeben wird, verschwindet der Ausschlag nach meheren Tagen.</p>
 	</div><!-- /content -->
 	
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
+    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
 		<ul data-role="listview">
 		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../../index.html">Home</a></li>
-		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li data-filtertext="Die Haut unser gr&ouml;ßtes Organ"><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
 		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li data-filtertext="Primäreffloreszenzen"><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Prim&auml;reffloreszenzen"><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li data-filtertext="Sekund&auml;reffloreszenzen"><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
 		   <li data-filtertext="Klinische Aspekte"><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
 		   <li data-filtertext="Klinische Befunde"><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
 		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
