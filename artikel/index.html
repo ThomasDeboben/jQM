@@ -15,42 +15,30 @@
 <body>
 
 <div data-role="page" id="exakid-page" data-theme="d">
-    <div data-role="header" data-theme="c" data-position="fixed">
+    <div data-role="header" data-theme="b" data-position="fixed">
         <h1>ExaKid</h1>
-		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-left" href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-right" href="./../artikel/index.html" data-ajax="false" data-icon="search" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Erkrankungen</a>
     </div><!-- /header -->
 
     <div data-role="content">
         <h1>Erkrankungen</h1>
 
-        <ul data-role="listview">
-            <li data-role="list-divider">A</li>
-            <li><a data-transition="slide" href="../artikel/ampiz/index.html">Arzneimittel-Exanthem </a></li>   
+        <ul data-role="listview" data-filter-placeholder="Suche..." data-inset="true" data-filter="true" data-autodividers="true">
             <li><a data-transition="slide" href="../artikel/akne/index.html">Akne juvenilis </a></li>
+            <li><a data-transition="slide" href="../artikel/ampiz/index.html">Arzneimittel-Exanthem </a></li> 
             <li><a data-transition="slide" href="../artikel/ekzem/index.html">Atopisches Ekzem </a></li>
-            <li data-role="list-divider">B</li>
-
-            <li data-role="collapsible-set">
-                <div data-role="collapsible">
-                    <h3>Borreliose</h3>
-                    <ul data-role="listview">
-                        <li><a data-transition="slide" href="../artikel/ecm/index.html">Erythema chronicum migrans</a></li>
-                        <li><a data-transition="slide" href="../artikel/borrel/index.html">Lymphozytom</a></li>
-                        <li><a data-transition="slide" href="../artikel/borrel/index.html">Fazialisparese (Neuroborreliose)</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li data-role="list-divider">C</li>
-            <li><a data-transition="slide" href="../artikel/waerme/index.html">Cutis marmorata teleangiectatica congenita </a>
-            </li>
-            <li data-role="list-divider">D</li>
+			
+			<li><a data-transition="slide" href="../artikel/ecm/index.html">Borreliose - Erythema chronicum migrans</a></li>
+			<li><a data-transition="slide" href="../artikel/borrel/index.html">Borreliose - Lymphozytom</a></li>
+			<li><a data-transition="slide" href="../artikel/borrel/index.html">Borreliose - Fazialisparese (Neuroborreliose)</a></li>
+			
+            <li><a data-transition="slide" href="../artikel/waerme/index.html">Cutis marmorata teleangiectatica congenita </a></li>
+			
             <li><a data-transition="slide" href="../artikel/warzen/index.html">Dellwarzen, mollusca contagiosa</a></li>
             <li><a data-transition="slide" href="../artikel/3tage/index.html">Dreitagefieber</a></li>
             <li><a data-transition="slide" href="../artikel/pemphigoid/index.html">Dermatitis herpetiformis Duhring</a></li>
-            <li><a data-transition="slide" href="../artikel/pemphigoid/index.html">IgA-Dermatose</a></li>
-            <li data-role="list-divider">E</li>
+			
             <li><a data-transition="slide" href="../artikel/epidermolyse/index.html">Epidermolysis bullosa hereditaria</a></li>
             <li><a data-transition="slide" href="../artikel/granulom/index.html">Eruptives H&auml;mangiom (pyogenes Granulom)</a></li>
             <li><a data-transition="slide" href="../artikel/waerme/index.html">Erythema ab igne </a></li>
@@ -58,33 +46,33 @@
             <li><a data-transition="slide" href="../artikel/3tage/index.html">Exanthema subitum (Dreitagefieber)</a></li>
             <li><a data-transition="slide" href="../artikel/ekzem/index.html">Ekzema infantum </a></li>
             <li><a data-transition="slide" href="../artikel/ekzemk/index.html">Ekzema infantum <br /> leichte Form</a></li>
-            <li data-role="list-divider">F</li>
+			
             <li><a data-transition="slide" href="../artikel/borrel/index.html">Fazialisparese, periphere </a></li>
-            <li data-role="list-divider">G</li> 
-          <li><a data-transition="slide" href="../artikel/gefaess/index.html">Gef&auml;ßmissbildungen</a></li>
+			
+            <li><a data-transition="slide" href="../artikel/gefaess/index.html">Gef&auml;ßmissbildungen</a></li>
             <li><a data-transition="slide" href="../artikel/zoster/index.html">Guertelrose (herpes zoster)</a></li>
             <li><a data-transition="slide" href="../artikel/gianotti/index.html">Gianotti-Crosti-Syndrom</a></li>
-            <li data-role="list-divider">H</li>
-              <li><a data-transition="slide" href="../artikel/haemangioma/index.html">H&auml;mangiome I</a></li>
+			
+            <li><a data-transition="slide" href="../artikel/haemangioma/index.html">H&auml;mangiome I</a></li>
             <li><a data-transition="slide" href="../artikel/haem_cremer/index.html">H&auml;mangiome II</a></li>
-             <li><a data-transition="slide" href="../artikel/propranolol/index.html">H&auml;mangiome <br />Behandlung mit Propranolol</a></li>
+            <li><a data-transition="slide" href="../artikel/propranolol/index.html">H&auml;mangiome <br />Behandlung mit Propranolol</a></li>
             <li><a data-transition="slide" href="../artikel/hfm/index.html">Hand-Fuß-Mund- Erkrankung</a></li>
-              <li><a data-transition="slide" href="../artikel/handschuh/index.html">Handschuh-Socken Syndrom</a></li>
-             <li><a data-transition="slide" href="../artikel/herpes_simplex/index.html">Herpes simplex- Infektion</a></li>
-              <li data-role="list-divider">I</li>
-            <li><a data-transition="slide" href="../artikel/impetigo/index.html">Impetigo contagiosa</a></li>
+            <li><a data-transition="slide" href="../artikel/handschuh/index.html">Handschuh-Socken Syndrom</a></li>
+            <li><a data-transition="slide" href="../artikel/herpes_simplex/index.html">Herpes simplex- Infektion</a></li>
+			
             <li><a data-transition="slide" href="../artikel/ichthyose/index.html">Ichthyosen</a></li>
-            <li data-role="list-divider">J</li>
-            <li data-role="list-divider">K</li>
-            <li><a data-transition="slide" href="../artikel/kerion/index.html">Kerion Celsi</a></li>
+            <li><a data-transition="slide" href="../artikel/pemphigoid/index.html">IgA-Dermatose</a></li>
+            <li><a data-transition="slide" href="../artikel/impetigo/index.html">Impetigo contagiosa</a></li>
+			
             <li><a data-transition="slide" href="../artikel/kawasaki/index.html">Kawasaki Syndrom</a></li>
+            <li><a data-transition="slide" href="../artikel/kerion/index.html">Kerion Celsi</a></li>
             <li><a data-transition="slide" href="../artikel/ichthyose/index.html">Keratosis palmoplantaris diffusa</a></li>
-               <li><a data-transition="slide" href="../artikel/haematom/index.html">Kindsmisshandlung </a></li>
+            <li><a data-transition="slide" href="../artikel/haematom/index.html">Kindsmisshandlung </a></li>
             <li><a data-transition="slide" href="../artikel/kuriosa/index.html">Kuriositaeten </a></li>
-            <li data-role="list-divider">L</li>
+			
             <li><a data-transition="slide" href="../artikel/lupus/index.html">Lupus erythematodes</a></li>
             <li><a data-transition="slide" href="../artikel/lyell/index.html">Lyell Syndrom</a></li>
-            <li data-role="list-divider">M</li>
+			
             <li><a data-transition="slide" href="../artikel/masern/index.html">Masern</a></li>
             <!--
             <li><a data-transition="slide" href="../artikel/mastozytose/index.html">Mastozytose - urtikaria pigmentosa</a></li>
@@ -93,97 +81,79 @@
             <li><a data-transition="slide" href="../artikel/milben/index.html">Milbenbefall, Trombidiose</a></li>
             <li><a data-transition="slide" href="../artikel/haematom/index.html">Misshandlungen</a></li>
             <li><a data-transition="slide" href="../artikel/warzen/index.html">Mollusca contagiosa, Dellwarzen</a></li>
-            <li data-role="list-divider">N</li>
+			
             <li><a data-transition="slide" href="../artikel/ekzem/index.html">Neurodermitis</a></li>
             <li><a data-transition="slide" href="../artikel/ekzem/index.html">Neurodermitis - Minimalzeichen</a></li>
-            <li data-role="list-divider">O</li>
+			
             <li><a data-transition="slide" href="../artikel/onycho/index.html">Onychomykose </a></li>
             <li><a data-transition="slide" href="../artikel/riroe/index.html">Ohrfeigenexanthem</a></li>
-            <li data-role="list-divider">P</li>
-            <li data-role="collapsible-set">
-                <div data-role="collapsible">
-                    <h3>Pilzerkrankungen der Haut</h3>
-                    <ul data-role="listview">
-                        <li><a data-transition="slide" href="../artikel/kerion/index.html">Kerion Celsi - Tinea capitis</a></li>
-                        <li><a data-transition="slide" href="../artikel/onycho/index.html">Onychomykose </a></li>
-                        <li><a data-transition="slide" href="../artikel/versicolor/index.html">Pityriasis versicolor</a></li>
-                        <li><a data-transition="slide" href="../artikel/soor/index.html">Soordermatitis</a></li>
-                        <li><a data-transition="slide" href="../artikel/tinea/index.html">Tinea corporis</a></li>
-                    </ul>
-                </div>
-            </li>
+			
+            <li><a data-transition="slide" href="../artikel/kerion/index.html">Pilzerkrankungen - Kerion Celsi - Tinea capitis</a></li>
+            <li><a data-transition="slide" href="../artikel/onycho/index.html">Pilzerkrankungen - Onychomykose </a></li>
+            <li><a data-transition="slide" href="../artikel/versicolor/index.html">Pilzerkrankungen - Pityriasis versicolor</a></li>
+            <li><a data-transition="slide" href="../artikel/soor/index.html">Pilzerkrankungen - Soordermatitis</a></li>
+            <li><a data-transition="slide" href="../artikel/tinea/index.html">Pilzerkrankungen - Tinea corporis</a></li>
             <li><a data-transition="slide" href="../artikel/roeschen/index.html">Pityriasis rosea (Roeschenflechte)         </a></li>
             <li><a data-transition="slide" href="../artikel/pityriasis/index.html">Pityriasis lichenoides et varioliformis acuta (PLEVA)</a></li>
-              <li><a data-transition="slide" href="../artikel/versicolor/index.html">Pityriasis versicolor   </a></li>
+            <li><a data-transition="slide" href="../artikel/versicolor/index.html">Pityriasis versicolor   </a></li>
             <li><a data-transition="slide" href="../artikel/psoriasis/index.html">Psoriasis (Schuppenflechte)</a></li>
             <li><a data-transition="slide" href="../artikel/pemphi/index.html">Pemphigus </a></li>
             <li><a data-transition="slide" href="../artikel/pemphigoid/index.html">Pemphigoid </a></li>
             <li><a data-transition="slide" href="../artikel/granulom/index.html">Pyogenes Granulom </a></li>
-            <li data-role="list-divider">Q</li>
+			
             <li><a data-transition="slide" href="../artikel/quincke/index.html">Quinke- Ödem</a></li>
-            <li data-role="list-divider">R</li>
+			
             <li><a data-transition="slide" href="../artikel/riroe/index.html">Ringelroeteln (erythema infectiosum)</a></li>
             <li><a data-transition="slide" href="../artikel/roeschen/index.html">Roeschenflechte (pityriasis rosea) </a></li>
             <li><a data-transition="slide" href="../artikel/roeteln/index.html">R&ouml;teln (Rubella)</a></li>
-            <li data-role="list-divider">S</li>
+			
             <li><a data-transition="slide" href="../artikel/scarlatina/index.html">Scharlach (Scarlatina)</a></li>
-            <li><a data-transition="slide" href="../artikel/scarlatinella/index.html">Scharlach -leichte Form (Scarlatinella)</a>
-            </li>
+            <li><a data-transition="slide" href="../artikel/scarlatinella/index.html">Scharlach -leichte Form (Scarlatinella)</a></li>
             <li><a data-transition="slide" href="../artikel/lupus/index.html">Schmetterlingsgesicht bei LE</a></li>
             <li><a data-transition="slide" href="../artikel/skabies/index.html">Skabies</a></li>
-            <li data-role="list-divider">T</li>
+			
             <li><a data-transition="slide" href="../artikel/tinea/index.html">Tinea corporis</a></li>
             <li><a data-transition="slide" href="../artikel/kerion/index.html">Tinea capitis</a></li>
             <li><a data-transition="slide" href="../artikel/milben/index.html">Trombidiose</a></li>
-            <li data-role="list-divider">U</li>
-            <li><a data-transition="slide" href="../artikel/unilateral/index.html">Unilaterales laterothorakales Exanthem
-                (ULE)</a></li>
-            <li data-role="collapsible-set">
-                <div data-role="collapsible">
-                    <h3>Urtikaria</h3>
-                    <ul data-role="listview">
-                        <li><a data-transition="slide" href="../artikel/quincke/index.html">Papul&auml;re Urtikaria</a></li>
-                        <li><a data-transition="slide" href="../artikel/quincke/index.html">Urtikaria factitia</a></li>
-                        <li><a data-transition="slide" href="../artikel/quincke/index.html">Quincke- Ödem</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li data-role="list-divider">V</li>
+			
+            <li><a data-transition="slide" href="../artikel/unilateral/index.html">Unilaterales laterothorakales Exanthem (ULE)</a></li>
+			<li><a data-transition="slide" href="../artikel/quincke/index.html">Urtikaria - Papul&auml;re Urtikaria</a></li>
+			<li><a data-transition="slide" href="../artikel/quincke/index.html">Urtikaria - Urtikaria factitia</a></li>
+			<li><a data-transition="slide" href="../artikel/quincke/index.html">Urtikaria - Quincke- Ödem</a></li>
+			
             <li><a data-transition="slide" href="../artikel/windpocken/index.html">Varizellen</a></li>
-            <li data-role="collapsible-set">
-                <div data-role="collapsible">
-                    <h3>Vaskulitis</h3>
-                    <ul data-role="listview">
-                        <li><a data-transition="slide" href="../artikel/purpura/index.html">Sch&ouml;nlein-Henoch- Vaskulitis</a></li>
-                        <li><a data-transition="slide" href="../artikel/kawasaki/index.html">Kawasaki-Syndrom</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li data-role="list-divider">W</li>
+			<li><a data-transition="slide" href="../artikel/purpura/index.html">Vaskulitis - Sch&ouml;nlein-Henoch- Vaskulitis</a></li>
+			<li><a data-transition="slide" href="../artikel/kawasaki/index.html">Vaskulitis - Kawasaki-Syndrom</a></li>
+			
             <li><a data-transition="slide" href="../artikel/warzen/index.html">Warzen, plantare und vulg&auml;re</a></li>
             <li><a data-transition="slide" href="../artikel/meningo/index.html">Waterhouse-Friderichsen-Syndrom</a></li>
             <li><a data-transition="slide" href="../artikel/soor/index.html">Windeldermatitis</a></li>
             <li><a data-transition="slide" href="../artikel/windpocken/index.html">Windpocken</a></li>
-            <li data-role="list-divider">X</li>
+			
             <li><a data-transition="slide" href="../artikel/xantho/index.html">Xanthogranulom</a></li>
-            <li data-role="list-divider">Y</li>
-            <li data-role="list-divider">Z</li>
+			
             <li><a data-transition="slide" href="../artikel/zoster/index.html">Zoster, herpes zoster</a></li>
         </ul>
 
 	</div><!-- /content -->
 	
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
+    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
 		<ul data-role="listview">
-		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../index.html">Home</a></li>
-		   <li data-filtertext="Die Haut unser gr&ouml;ßtes Organ"><a href="./../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li data-filtertext="Prim&auml;reffloreszenzen"><a href="./../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Sekund&auml;reffloreszenzen"><a href="./../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Klinische Aspekte"><a href="./../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li data-filtertext="Klinische Befunde"><a href="./../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		   <li data-filtertext="Erkrankungen"><a href="./../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider"><br></li>
+		   <li data-icon="home"><a href="./../index.html">Home</a></li>
+		   <li data-role="list-divider">Diagnosen</li>
+		   <li data-icon="search" data-theme="e"><a href="./../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider">Einleitungen</li>
+		   <li><a href="./../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li><a href="./../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+		   <li><a href="./../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li><a href="./../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li><a href="./../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+		   <li><a href="./../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+		   <li><a href="./../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+		   <li data-role="list-divider">Informationen</li>
+		   <li data-icon="info"><a href="./../danksagung.html">Danksagung</a></li>
+		   <li data-icon="info"><a href="./../impressum.html">Impressum</a></li>
 		</ul>
     </div><!-- /panel -->
 </div><!-- /page -->

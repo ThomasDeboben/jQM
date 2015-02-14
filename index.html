@@ -15,59 +15,100 @@
 <body>
 
 <div data-role="page" id="exakid-page" data-theme="d">
-    <div data-role="header" data-theme="c" data-position="fixed">
+    <div data-role="header" data-theme="b" data-position="fixed">
         <h1>ExaKid</h1>
-		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-left" href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-right" href="./artikel/index.html" data-ajax="false" data-icon="search" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Erkrankungen</a>
     </div><!-- /header -->
 
     <div data-role="content">
         <h1>ExaKid</h1>
         <p><strong>exantheo (gr.) = "ich bl&uuml;he auf".<br/>
            Die Haut erbl&uuml;ht bei verschiedensten Krankheiten.<br/>
-           Das ist unser Thema!.</strong></p>
+           Das ist unser Thema!</strong></p>
 
-		<img src=".\images\splash.png">
+		<div>
+		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:400px;">
+		   <li data-role="list-divider">
+		   <div align="center">
+		       <img src=".\images\splash.png" style="width:99%;"/>
+		   </div></li>
+		  </ul>
+		</div><br>
 
 		<p>Neu bei ExaKid?<br>
-		   Lesen Sie zum Anfang die folgenden Einleitungen.
+		   Lesen Sie zum &Uuml;berblick die folgenden Einleitungen.
         </p>
-		<div class="ui-grid-a ui-responsive">
-        	
-            <div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Haut und ihre Symptome</h3>
-
-        			<p><a href="./einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></p>
-        			<p><a href="./einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></p>
-        			<p><a href="./einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></p>
-        			<p><a href="./einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></p>
+		<div class="ui-grid-a ui-responsive" padding:10 style="max-width:800px;">
+            <div class="ui-block-a" style="max-width:400px;">
+        		<div>
+                    <ul data-role="listview" data-inset="true" data-divider-theme="c">
+                     <li data-role="list-divider"><h3>Haut und ihre Symptome</h3></li>
+                     <li>
+             			<a href="./einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a>
+					 </li>
+					 <li>
+            			<a href="./einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a>
+					 </li>
+					 <li>
+            			<a href="./einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a>
+					 </li>
+					 <li>
+            			<a href="./einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a>
+					 </li>
+                    </ul>
         		</div>
         	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>Exantheme mit Begleiterscheinungen</h3>
-
-        			<p><a href="./einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></p>
-        			<p><a href="./einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></p>
-        			<p><a href="./einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></p>
+        	<div class="ui-block-b" style="max-width:400px;">
+        		<div>
+                    <ul data-role="listview" data-inset="true" data-divider-theme="c">
+                     <li data-role="list-divider"><h3>Exantheme mit Begleiterscheinungen</h3></li>
+                     <li>
+             			<a href="./einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a>
+					 </li>
+					 <li>
+            			<a href="./einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a>
+					 </li>
+					 <li>
+            			<a href="./einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></p>
+					 </li>
+                    </ul>
         		</div>
         	</div>  
         </div>			
-    </div><!-- /content -->
 
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
+		<div style="max-width:400px;">
+			<ul data-role="listview" data-inset="true" data-divider-theme="c">
+			 <li data-role="list-divider"><h3>Informationen</h3></li>
+			 <li data-icon="info">
+				<a href="./danksagung.html" data-ajax="false">Danksagung</a>
+			 </li>
+			 <li data-icon="info">
+				<a href="./impressum.html" data-ajax="false">Impressum</a>
+			 </li>
+			</ul>
+		</div>
+
+		</div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
 		<ul data-role="listview">
-		   <li data-filtertext="demos homepage" data-icon="home"><a href="./index.html">Home</a></li>
-		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li data-filtertext="Primäreffloreszenzen"><a href="./einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Klinische Aspekte"><a href="./einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li data-filtertext="Klinische Befunde"><a href="./einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li data-filtertext="Ärztliche Verantwortung"><a href="./einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		   <li data-filtertext="Erkrankungen"><a href="./artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider"><br></li>
+		   <li data-icon="home"><a href="./index.html">Home</a></li>
+		   <li data-role="list-divider">Diagnosen</li>
+		   <li data-icon="search" data-theme="e"><a href="./artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider">Einleitungen</li>
+		   <li><a href="./einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li><a href="./einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+		   <li><a href="./einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li><a href="./einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li><a href="./einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+		   <li><a href="./einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+		   <li><a href="./einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+		   <li data-role="list-divider">Informationen</li>
+		   <li data-icon="info"><a href="./danksagung.html">Danksagung</a></li>
+		   <li data-icon="info"><a href="./impressum.html">Impressum</a></li>
 		</ul>
-
     </div><!-- /panel -->
 </div><!-- /page -->
 </body>

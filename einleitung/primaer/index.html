@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -13,11 +13,13 @@
 	<script src="./../../js/exakid.js"></script>
   </head>
 <body>
+
 <div data-role="page" id="exakid-page" data-theme="d">
 
-    <div data-role="header" data-theme="c" data-position="fixed">
+    <div data-role="header" data-theme="b" data-position="fixed">
         <h1>ExaKid</h1>
-		<a href="#left-panel" data-theme="c" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-left" href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
+		<a class="ui-btn-right" href="./../../artikel/index.html" data-ajax="false" data-icon="search" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Erkrankungen</a>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -66,77 +68,95 @@
 		- auf nur eine K&ouml;rperseite beschr&auml;nkt, -symmetrisch beidseitig auftretend.<br>
 		Dazu kommen weitere wichtige Angaben wie Allgemeinzustand, Fieber, subjektive Beschwerden, Symptome wie
 		Durchfall, Juckreiz, Schmerzen u.&auml;.
-        </p>
+        </p><br>
 
-		<h2>Bilder</h2>
+        <p><b>Zwei Beispiele:</b></p>
 		<div>
+		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
+		    <li data-role="list-divider"><br></li>
+            <li data-role="list-divider" data-icon="false">
+			<div align="center">
 			<a href="#popup1" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/windpocken/detail1s.jpg" alt="Bild 1" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/einleitung/primaer/image1s.jpg" alt="Bild 1" style="width:30%;max-width:150px;"></a>
 			<a href="#popup2" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/windpocken/detail2s.jpg" alt="Bild 2" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/einleitung/primaer/image2s.jpg" alt="Bild 2" style="width:30%;max-width:150px;"></a>
 			<a href="#popup3" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/windpocken/detail3s.jpg" alt="Bild 3" style="width:30%;max-width:150px;"></a>
-            <br>                                                                                                                                                                 
-			<a href="#popup4" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/exall/image1s.jpg" alt="Bild 4" style="width:30%;max-width:150px;"></a>
-			<a href="#popup5" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/exall/image2s.jpg" alt="Bild 5" style="width:30%;max-width:150px;"></a>
-			<a href="#popup6" data-rel="popup" data-position-to="window" data-transition="flip">
-			<img class="popphoto" src="../../images/artikel/exall/image3s.jpg" alt="Bild 6" style="width:30%;max-width:150px;"></a>
+			<img class="popphoto" src="../../images/einleitung/primaer/image3s.jpg" alt="Bild 3" style="width:30%;max-width:150px;"></a>
+			</div></li>
 
 			<div data-role="popup" id="popup1" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/windpocken/detail1.jpg" style="width:100%;" alt="Bild 1">
+				<img class="popphoto" src="../../images/einleitung/primaer/image1.jpg" style="width:100%;" alt="Bild 1">
 				<p>Windpocken<br>
 				Bl&auml;schen mit Pfeilen markiert</p>
 			</div>
 			<div data-role="popup" id="popup2" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/windpocken/detail2.jpg" style="width:100%;" alt="Bild 2">
+				<img class="popphoto" src="../../images/einleitung/primaer/image2.jpg" style="width:100%;" alt="Bild 2">
 				<p>Windpocken<br>
 				Bl&auml;schen mit Pfeilen markiert, daneben Flecken und r&ouml;tliche Papeln</p>
 			</div>
 			<div data-role="popup" id="popup3" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
 			    <br>
 				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/windpocken/detail3.jpg" style="width:100%;" alt="Bild 3">
+				<img class="popphoto" src="../../images/einleitung/primaer/image3.jpg" style="width:100%;" alt="Bild 3">
 				<p>Windpocken<br>
                 Rote Flecken und r&ouml;tliche Papeln in der Anfangsphase</p>
 			</div>
-			<div data-role="popup" id="popup4" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
-			    <br>
-				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/exall/image1.jpg" style="width:100%;" alt="Bild 4">
-				<p>gro&szlig;fl&auml;chige Flecken bei allergischem Exanthem</p>
-			</div>
-			<div data-role="popup" id="popup5" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
-			    <br>
-				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/exall/image2.jpg" style="width:100%;" alt="Bild 5">
-				<p>ringf&ouml;rmige Flecken bei allergischem Exanthem</p>
-			</div>
-			<div data-role="popup" id="popup6" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
-			    <br>
-				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
-				<img class="popphoto" src="../../images/artikel/exall/image3.jpg" style="width:100%;" alt="Bild 6">
-				<p>allergisches Exanthem <br>
-                kreisf&ouml;rmige Flecken, leicht erhaben</p>
-			</div>
+            <li data-role="list-divider">Akute Windpocken</li>
+          </ul>
 		</div><!--/demo-html -->
-        <p>Akute Windpocken - allergisches Exanthem</p>
 
-        <p>Zwei Beispiele:<br>
+		<p>
 		Die Windpocken sind unschwer zu erkennen. Vor allem im Rumpfbereich(s. Abb. oben) sind die <b>verschiedenen Stadien</b> 
 		der Effloreszenzen gleichzeitig sichtbar: Rote Flecken -> Papeln -> Bl&auml;schen -> verkrustete Bl&auml;schen.
 		Die Windpocken stehen disseminiert &uuml;ber den ganzen K&ouml;rper verteilt. Mund- und Rachenbereich sind h&auml;ufig 
 		mitbeteiligt ("Enanthem"), es besteht starker Juckreiz, Schmerzen werden weniger geklagt. Beim Abklingen kann es zur 
 		Narbenbildung und evtl. Depigmentierung kommen.<br>
 		Wichtig wie immer ist die Anamnese: Gab es vor etwa 2 Wochen Windpocken in der Umgebung, Kinderkrippe, Kindergarten, 
-		Schule, B&uuml;ro? Ist das Kind gegen Windpocken geimpft?<br><br>
-		Das allergische Exanthem zeigt - in der Abbildung untere Bildreihe - nur eine bzw mehrere fl&auml;chenhafte R&ouml;tungen 
+		Schule, B&uuml;ro? Ist das Kind gegen Windpocken geimpft?</p>
+		
+		<div>
+		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
+		    <li data-role="list-divider"><br></li>
+            <li data-role="list-divider" data-icon="false">
+			<div align="center">
+			<a href="#popup4" data-rel="popup" data-position-to="window" data-transition="flip">
+			<img class="popphoto" src="../../images/einleitung/primaer/image4s.jpg" alt="Bild 4" style="width:30%;max-width:150px;"></a>
+			<a href="#popup5" data-rel="popup" data-position-to="window" data-transition="flip">
+			<img class="popphoto" src="../../images/einleitung/primaer/image5s.jpg" alt="Bild 5" style="width:30%;max-width:150px;"></a>
+			<a href="#popup6" data-rel="popup" data-position-to="window" data-transition="flip">
+			<img class="popphoto" src="../../images/einleitung/primaer/image6s.jpg" alt="Bild 6" style="width:30%;max-width:150px;"></a>
+			</div></li>
+
+			<div data-role="popup" id="popup4" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			    <br>
+				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
+				<img class="popphoto" src="../../images/einleitung/primaer/image4.jpg" style="width:100%;" alt="Bild 4">
+				<p>gro&szlig;fl&auml;chige Flecken bei allergischem Exanthem</p>
+			</div>
+			<div data-role="popup" id="popup5" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			    <br>
+				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
+				<img class="popphoto" src="../../images/einleitung/primaer/image5.jpg" style="width:100%;" alt="Bild 5">
+				<p>ringf&ouml;rmige Flecken bei allergischem Exanthem</p>
+			</div>
+			<div data-role="popup" id="popup6" data-overlay-theme="b" data-theme="b" data-corners="true" style="width:95%;max-width:480px;">
+			    <br>
+				<a class="ui-btn-right" href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-rel="back" data-theme="d"></a>
+				<img class="popphoto" src="../../images/einleitung/primaer/image6.jpg" style="width:100%;" alt="Bild 6">
+				<p>allergisches Exanthem <br>
+                kreisf&ouml;rmige Flecken, leicht erhaben</p>
+			</div>
+            <li data-role="list-divider">Allergisches Exanthem</li>
+          </ul>
+		</div><!--/demo-html -->
+
+		<p>Das allergische Exanthem zeigt - in der Abbildung untere Bildreihe - nur eine bzw mehrere fl&auml;chenhafte R&ouml;tungen 
 		("Erytheme" ).</p>
+
 		<p>Die <strong>Prim&auml;reffloreszenzen</strong> sind gleichartig (monomorph), die R&ouml;tung ist scharf abgegrenzt. 
 		Es dominiert eine sehr variable Form: Fl&auml;chige, kreisf&ouml;rmige auch sternf&ouml;rmige Strukturen sind zu sehen. 
 		Sie k&ouml;nnen schnell verschwinden, an anderer Stelle auftauchen. Subjektives Wohlbefinden, aber auch starker Juckreiz 
@@ -145,18 +165,24 @@
 		besteht zur Zeit ein Infekt?</p>
      
     </div><!-- /content -->
-
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="b">
+	
+    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
 		<ul data-role="listview">
-		   <li data-filtertext="demos homepage" data-icon="home"><a href="./../../index.html">Home</a></li>
-		   <li data-filtertext="Die Haut unser größtes Organ"><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li data-filtertext="Exanthem und Effloreszenzen"><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li data-filtertext="Primäreffloreszenzen"><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Sekundäreffloreszenzen"><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li data-filtertext="Klinische Aspekte"><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li data-filtertext="Klinische Befunde"><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li data-filtertext="Ärztliche Verantwortung"><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		   <li data-filtertext="Erkrankungen"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider"><br></li>
+		   <li data-icon="home"><a href="./../../index.html">Home</a></li>
+		   <li data-role="list-divider">Diagnosen</li>
+		   <li data-icon="search" data-theme="e"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+		   <li data-role="list-divider">Einleitungen</li>
+		   <li><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+		   <li><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+		   <li><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+		   <li><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+		   <li><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+		   <li><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+		   <li><a href="./../..//einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+		   <li data-role="list-divider">Informationen</li>
+		   <li data-icon="info"><a href="./../../danksagung.html">Danksagung</a></li>
+		   <li data-icon="info"><a href="./../../impressum.html">Impressum</a></li>
 		</ul>
     </div><!-- /panel -->
 </div><!-- /page -->
