@@ -1,4 +1,4 @@
-	<style>
+<style>
 		/* Swipe works with mouse as well but often causes text selection. */
 		
 #exakid-page * {
@@ -22,6 +22,10 @@
 		}
 
 		/* Content styling. */
+
+#ArtikelUeberschrift {
+   color:#8cc63f;
+}
 		
 dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
 		

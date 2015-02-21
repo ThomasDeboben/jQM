@@ -1,14 +1,32 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.tsdndemo" version="1.1.0" xmlns="http://www.w3.org/ns/widgets"
+<widget id="com.phonegap.exakid" version="1.1.0" xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
     <name>
-        tsdn Demo
+        ExaKid
     </name>
     <description>
-        tsdn Demo.
+        Dr. Thomas Rautenstrauch präsentiert eine App für Ärzte, Studenten, Pflegende, Arzthelferinnen und
+        Interessierte.
+        Vorneweg die Fakten:
+        Die App bietet:
+        - Über 400 Krankheitsfotos,
+        - Über 100 Erkrankungen,
+        ständige Erneuerungen sind vorgesehen
+        Die vorliegende App „Exantheme im Kindesalter zeigt die häufigsten kinderdermatologischen Erkrankungen in der
+        täglichen Praxis. Sie richtet sich an Studierende der Medizin, an Ärzte und an medizinisches Fachpersonal, die
+        sich einen kurzen Überblick zu einer spezifischen Hautveränderung verschaffen möchten. Aber auch Eltern können
+        darin einen kleinen aktuellen Ratgeber sehen. Es muss aber betont werden, dass der Gang zum Arzt niemals ersetzt
+        werden kann.
+        Eine kurze Beschreibung der einzelnen Krankheitsbilder wird gegeben. Ätiologie und diagnostische Zusammenhänge
+        werden bewusst den Nachschlagwerken überlassen. Im wesentlichen soll der Blick für die Hautveränderungen bei
+        Kindern geschult werden.
+
+        Im einführenden Text stehen die Erfahrungen einer lebenslangen Berufserfahrung Ein Krankheitsbild wird meist mit
+        6 charakteristische Bilder beschrieben. Zusammen mit einer sorgfältig erhobenen Vorgeschichte sollten diese
+        visuellen Marker eine Diagnose in vielen Fällen ermöglichen.
     </description>
-    <author email="thomas@deboben.de">
-        TSDN
+    <author email="thomas.rautenstrauch@t-online.de">
+        Dr. Thomas Rautenstrauch
     </author>
     <preference name="permissions" value="none"/>
     <preference name="phonegap-version" value="3.6.3"/>
