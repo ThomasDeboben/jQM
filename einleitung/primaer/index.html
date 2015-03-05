@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ExaKid</title>
 	<link rel="stylesheet"  href="./../../css/themes/default/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet"  href="./../../css/themes/default/exakid.min.css">
 	<link rel="stylesheet"  href="./../../css/exakid.css">
-	<link rel="shortcut icon" href="./../../favicon.ico">
 	<script src="./../../js/jquery.js"></script>
 	<script src="./../../_assets/js/index.js"></script>
 	<script src="./../../js/jquery.mobile-1.3.2.min.js"></script>
@@ -14,7 +14,7 @@
   </head>
 <body>
 
-<div data-role="page" id="exakid-page" data-theme="d">
+<div data-role="page" id="exakid-page" data-theme="c">
 
     <div data-role="header" data-theme="b" data-position="fixed">
         <h2>ExaKid</h2>
@@ -22,10 +22,11 @@
 		<a class="ui-btn-right" href="./../../artikel/index.html" data-ajax="false" data-icon="search" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Erkrankungen</a>
     </div><!-- /header -->
 
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
+		<h2 id="ArtikelUeberschrift">Prim&auml;reffloreszenzen</h2>
 
 		  <ul data-role="listview" data-inset="true" data-divider-theme="d">
-		    <li data-role="list-divider"><h2>Hauterscheinungen:</h2></li>
+		    <li data-role="list-divider" data-theme="a"><h2>Hauterscheinungen:</h2></li>
             <li><a href="./../../artikel/blasen/index.html">
 			    <img src="./../../images/artikel/blasen/image1s.jpg">
 			    <h2>Blasen</h2>
@@ -50,7 +51,7 @@
 			    <img src="./../../images/artikel/erythem/image1s.jpg">
 			    <h2>Hautr&ouml;tungen</h2>
 			    <p>Erytheme</p></a></li>
-                                </ul>
+          </ul>
 		
         <p>
 		Gr&ouml;&szlig;e, Form und Ort des betroffenen Bereiches werden angegeben: <br>
@@ -65,7 +66,7 @@
         <p><b>Zwei Beispiele:</b></p>
 		<div>
 		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
-		    <li data-role="list-divider"><br></li>
+		    <li data-role="list-divider" data-theme="a"><br></li>
             <li data-role="list-divider" data-icon="false">
 			<div align="center">
 			<a href="#popup1" data-rel="popup" data-position-to="window" data-transition="flip">
@@ -97,7 +98,7 @@
 				<p>Windpocken<br>
                 Rote Flecken und r&ouml;tliche Papeln in der Anfangsphase</p>
 			</div>
-            <li data-role="list-divider">Akute Windpocken</li>
+            <li data-role="list-divider" data-theme="a">Akute Windpocken</li>
           </ul>
 		</div><!--/demo-html -->
 
@@ -112,7 +113,7 @@
 		
 		<div>
 		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
-		    <li data-role="list-divider"><br></li>
+		    <li data-role="list-divider" data-theme="a"><br></li>
             <li data-role="list-divider" data-icon="false">
 			<div align="center">
 			<a href="#popup4" data-rel="popup" data-position-to="window" data-transition="flip">
@@ -142,7 +143,7 @@
 				<p>allergisches Exanthem <br>
                 kreisf&ouml;rmige Flecken, leicht erhaben</p>
 			</div>
-            <li data-role="list-divider">Allergisches Exanthem</li>
+            <li data-role="list-divider" data-theme="a">Allergisches Exanthem</li>
         </ul>	</div><!--/demo-html -->
 
 		<p>Das allergische Exanthem (s. Abb.) zeigt  nur eine bzw mehrere fl&auml;chenhafte R&ouml;tungen 
@@ -156,22 +157,21 @@
 		besteht zur Zeit ein Infekt?</p>
     
 	
-    </div><!-- /content -->
-	
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
-		<ul data-role="listview">
-		   <li data-icon="home"><a href="./../../index.html">Home</a></li>
-		   <li data-icon="search" data-theme="e"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
-		   <li data-role="list-divider"></li>
-		   <li><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li><a href="./../..//einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		</ul>
-    </div><!-- /panel -->
+		<div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
+			<ul data-role="listview">
+			   <li data-icon="home"><a href="./../../index.html">Home</a></li>
+			   <li data-icon="search" data-theme="a"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+			   <li data-role="list-divider"></li>
+			   <li><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+			   <li><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+			   <li><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+			   <li><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+			   <li><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+			   <li><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+			   <li><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+			</ul>
+		</div><!-- /panel -->
+	</div><!-- /content -->
 </div><!-- /page -->
 </body>
 </html>

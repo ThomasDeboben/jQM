@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿o<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,16 +14,17 @@
   </head>
 <body>
 
-<div data-role="page" id="exakid-page" data-theme="d">
+<div data-role="page" id="exakid-page" data-theme="c">
     <div data-role="header" data-theme="b" data-position="fixed">
         <h2>ExaKid</h2>
 		<a class="ui-btn-left" href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
 		<a class="ui-btn-right" href="./../artikel/index.html" data-ajax="false" data-icon="search" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Erkrankungen</a>
     </div><!-- /header -->
 
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
+		<h2 id="ArtikelUeberschrift">Erkrankungen:</h2><br>
        
-        <ul data-role="listview" data-filter-placeholder="Suche..." data-inset="true" data-divider-theme="a" data-filter="true" data-autodividers="true">
+        <ul data-role="listview" data-filter-placeholder="Suche..." data-inset="true" data-divider-theme="d" data-filter="true" data-autodividers="true">
             
 			<!-- A -->  
             <li data-filtertext="acne vulgaris neonatorum infantum juvenilis kindliche akne">
@@ -43,7 +44,13 @@
 				<p>Ekzema infantum, akute Neurodermitis</p></a></li>
 	        
 			<!-- B -->  
-			<li data-filtertext="Borreliose Lymphozytom Neuroborreliose Fazialisparese periphere Gesichtsl&auml;hmung intensive r&ouml;tung ohrl&auml;ppchen nase nabel brustwarze hoden">
+    <li data-filtertext="Blaschko-Linien">
+			    <a href="./blaschko/index.html">
+			    <img src="./../images/artikel/blaschko/image1s.jpg">
+				<h2>Blaschko-Linien</h2>
+				<p>Lichen striatus, incontinentia pigmenti, epidermale naevus</p></a></li>
+
+			<li data-filtertext="Borreliose Lymphozytom Neuroborreliose Fazialisparese                              periphere Gesichtsl&auml;hmung intensive r&ouml;tung ohrl&auml;ppchen nase nabel brustwarze hoden">
 			    <a href="./borrel/index.html">
 			    <img src="./../images/artikel/borrel/image1s.jpg">
 				<h2>Borreliose, Borrelieninfektion</h2>
@@ -55,7 +62,7 @@
             <li data-filtertext=" cutis marmorata teleangiectatica congenita">
 			    <a href="./cutis/index.html">
 				<img src="./../images/artikel/waerme/image5s.jpg">
-				<h2>cutis marmorata teleangiectatica congenita</h2>
+				<h2>Cutis marmorata teleangiectatica congenita</h2>
 				<p>CMCT cutis marmorata teleangiectatica congenita</p></a></li>
 	
 			<!-- D -->  
@@ -71,32 +78,42 @@
 				<p>exanthema subitum 3-Tage-Fieber</p></a></li>
 
 			<!-- E -->  
-                                  <li data-filtertext="">
+
+              <li data-filtertext="">
+			    <a href="./ekzemk/index.html">
+				<img src="./../images/artikel/ekzemk/image1s.jpg">
+                <h2>Ekzema infantum leichte Form</h2>
+				<p>Ekzem Minimalzeichen leichte Form</p></a></li>
+               
+            <li data-filtertext="">
 			    <a href="./epidermolyse/index.html"> 
-                                                             <img src="./../images/artikel/epidermolyse/image1s.jpg">
+                <img src="./../images/artikel/epidermolyse/image1s.jpg">
 				<h2>Epidermolyse bullosa hereditaria</h2>
                 <p>bullöse Erkrankungen</p></a></li>
-
             <li data-filtertext="">
 			    <a href="./granulom/index.html">
 				<img src="./../images/artikel/granulom/image1s.jpg">
                 <h2>Eruptives H&auml;mangiom</h2>
 				<p>Pyogenes Granulom</p></a></li>
+                    <li data-filtertext="">
+			    <a href="./exsum/index.html">
+				<img src="./../images/artikel/exsum/image1s.jpg">
+                <h2>erythema exsudativum multiforme</h2>
+				<p>erythema exsudativum multiforme</p></a></li>
+
+       <li data-filtertext="">
+			    <a href="./erynodosum/index.html">
+				<img src="./../images/artikel/erynodosum/image1s.jpg">
+                <h2>erythema nodosum</h2>
+				<p>nodöses Erythem</p></a></li>
+
             <li data-filtertext="">
 			    <a href="./erythrasma/index.html">
 				<img src="./../images/artikel/erythrasma/image1s.jpg">
                 <h2>Erythrasma</h2>
 				<p>Intertrigin&ouml;se dermatitis</p></a></li>
-            <li data-filtertext="">
-			    <a href="./ekzem/index.html">
-				<img src="./../images/artikel/ekzem/image1s.jpg">
-                <h2>Ekzema infantum  atopisches Ekzem</h2>
-				<p>Neurodermitis kindliches Ekzem</p></a></li>
-            <li data-filtertext="">
-			    <a href="./ekzemk/index.html">
-				<img src="./../images/artikel/ekzemk/image1s.jpg">
-                <h2>Ekzema infantum leichte Form</h2>
-				<p>Ekzem Minimalzeichen leichte Form</p></a></li>
+              
+
 			
 			<!-- G -->  
             <li data-filtertext="">
@@ -146,6 +163,11 @@
 				<img src="./../images/artikel/herpes_simplex/image1s.jpg">
                 <h2>Herpes simplex- Infektion</h2>
 				<p>herpes-simplex- Virus</p></a></li>
+  <li data-filtertext="">
+			    <a href="./hidradenitis/index.html">
+				<img src="./../images/artikel/hidradenitis/image1s.jpg">
+                <h2>Hidradenitis</h2>
+				<p>Rekurrierende palmoplantare Hidradenitis </p></a></li>
 			
 			<!-- I -->  
             <li data-filtertext="">
@@ -158,6 +180,11 @@
 				<img src="./../images/artikel/impetigo/image1s.jpg">
                 <h2>Impetigo contagiosa</h2>
 				<p>Sch&auml;lblasen Eiterflechte Grindflechte</p></a></li>
+                <li data-filtertext="">
+			    <a href="./insekt/index.html">
+				<img src="./../images/artikel/insekt/image1s.jpg">
+                <h2>Insektenstich</h2>
+				<p>Insektenstiche, infizierte</p></a></li>
 
 			<!-- K -->  
             <li data-filtertext="">
@@ -171,7 +198,7 @@
                 <h2>Kerion Celsi</h2>
 				<p>Tiefe Pilzinfektion tinea capitis Trichophytie</p></a></li>
             <li data-filtertext="">
-			    <a href="./ichthyose/index.html">
+			    <a href="./keratosis/index.html">
 				<img src="./../images/artikel/keratosis/image1s.jpg">
                 <h2>Keratosis palmoplantaris diffusa</h2>
 				<p>Keratosis palmoplantaris diffusa</p></a></li>
@@ -221,15 +248,7 @@
 				<p>Trombidiose Herbstkr&auml;tze "Beiß"</p></a></li>
           
 			<!-- O -->  
-              <li data-filtertext="">
-			    <a href="./riroe/index.html">
-				<img src="./../images/artikel/riroe/image1s.jpg">
-
-                <h2>Ohrfeigenexanthem</h2>
-				<p>Ringelr&ouml;teln schmetterlingsf&ouml;rmige Gesichtsr&ouml;te</p></a></li>
-
-
-            <li data-filtertext="">
+           <li data-filtertext="">
 			    <a href="./onycho/index.html">
 				<img src="./../images/artikel/onycho/image1s.jpg">
                 <h2>Onychomykose</h2>
@@ -303,10 +322,10 @@
                 <h2>Soordermatitis</h2>
 				<p>Windeldermatitis Candida albicans</p></a></li>
             <li data-filtertext="">
-			    <a href=".staph/index.html">
+			    <a href="./staph/index.html">
 				<img src="./../images/artikel/staph/image1s.jpg"> 
                 <h2>Staphylokokkeninfektion</h2>
-				<p> Staphylokokkensepsis SSSS staphylococcal scaled skin syndrome</p></a></li>
+				<p>Staphylococcal scaled skin syndrome</p></a></li>
          
 			<!-- T -->  
             <li data-filtertext="">
@@ -359,22 +378,21 @@
 				<p>Xanthogranulom</p></a></li>
         </ul>
 
+		<div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
+			<ul data-role="listview">
+			   <li data-icon="home"><a href="./../index.html">Home</a></li>
+			   <li data-icon="search" data-theme="a"><a href="./../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+			   <li data-role="list-divider"></li>
+			   <li><a href="./../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+			   <li><a href="./../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+			   <li><a href="./../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+			   <li><a href="./../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+			   <li><a href="./../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+			   <li><a href="./../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+			   <li><a href="./../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+			</ul>
+		</div><!-- /panel -->
 	</div><!-- /content -->
-	
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
-		<ul data-role="listview">
-		   <li data-icon="home"><a href="./../index.html">Home</a></li>
-		   <li data-icon="search" data-theme="a"><a href="./../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
-		   <li data-role="list-divider"></li>
-		   <li><a href="./../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li><a href="./../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li><a href="./../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li><a href="./../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li><a href="./../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li><a href="./../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li><a href="./../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		</ul>
-    </div><!-- /panel -->
 </div><!-- /page -->
 </body>
 </html>

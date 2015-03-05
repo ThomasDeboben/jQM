@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ExaKid</title>
 	<link rel="stylesheet"  href="./../../css/themes/default/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet"  href="./../../css/themes/default/exakid.min.css">
 	<link rel="stylesheet"  href="./../../css/exakid.css">
-	<link rel="shortcut icon" href="./../../favicon.ico">
 	<script src="./../../js/jquery.js"></script>
 	<script src="./../../_assets/js/index.js"></script>
 	<script src="./../../js/jquery.mobile-1.3.2.min.js"></script>
@@ -14,7 +14,7 @@
   </head>
 <body>
 
-<div data-role="page" id="exakid-page" data-theme="d">
+<div data-role="page" id="exakid-page" data-theme="c">
     <div data-role="header" data-theme="b" data-position="fixed">
         <h2>ExaKid</h2>
 		<a class="ui-btn-left" href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Menu</a>
@@ -22,8 +22,8 @@
     </div><!-- /header -->
 
 
-    <div data-role="content">
-		<h2>Mucokutanes Lymphknotensyndrom<br>
+    <div data-role="content" data-theme="c">
+		<h2 id="ArtikelUeberschrift">Mucokutanes Lymphknotensyndrom<br>
 		Kawasaki-Syndrom</h2>
 
 		<p>Das Kawasaki- Syndrom ist eine hochfieberhafte Exanthemerkrankung im KIndesalter.		Mit gro&szlig;er Wahrscheinlichkeit handelt es sich um eine Vaskulitis u.U. dem rheumatischen Formenkreis zugeh&ouml;rend.</p>
@@ -39,7 +39,7 @@
 
 		<div>
 		  <ul data-role="listview" data-inset="true" data-divider-theme="c" style="max-width:500px;">
-		    <li data-role="list-divider"><br></li>
+		    <li data-role="list-divider" data-theme="a"><br></li>
             <li data-role="list-divider" data-icon="false">
 			<div align="center">
 			<a href="#popup1" data-rel="popup" data-position-to="window" data-transition="flip">
@@ -93,7 +93,7 @@
 				<img class="popphoto" src="../../images/artikel/kawasaki/image6.jpg" style="width:100%;" alt="Bild 6">
 				<p>Kawasaki- Syndrom, Exanthem</p>
 			</div>
-            <li data-role="list-divider">Kawasaki- Syndrom - mucocutanes Lymphknotensyndrom<br>
+            <li data-role="list-divider" data-theme="a">Kawasaki- Syndrom - mucocutanes Lymphknotensyndrom<br>
             Die Bilder wurden mir freundlicherweise von Prof. Hj.Cremer zur Verf&uuml;gung gestellt</li>
           </ul>
 		</div><!--/demo-html -->
@@ -102,22 +102,22 @@
 		akuten Maserninfektion &auml;hnlich, noch st&auml;rker aber ist der scharlach&auml;hnliche Charakter (Himbeerzunge, Rachenring 
 		ger&ouml;tet, sch&auml;lende Haut an den H&auml;nden und F&uuml;&szlig;en). Beim Vollbild des Kawasaki-Syndroms ist eine 
 		station&auml;re Unterbringung notwendig. Kardiale und koronare Komplikationen m&uuml;ssen ausgeschlossen werden.</p>
-	</div><!-- /content -->
 	
-    <div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
-		<ul data-role="listview">
-		   <li data-icon="home"><a href="./../../index.html">Home</a></li>
-		   <li data-icon="search" data-theme="e"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
-		   <li data-role="list-divider"></li>
-		   <li><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
-		   <li><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
-		   <li><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
-		   <li><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
-		   <li><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
-		   <li><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
-		   <li><a href="./../..//einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
-		</ul>
-    </div><!-- /panel -->
+		<div data-role="panel" id="left-panel" data-display="overlay" data-theme="c" data-position-fixed="true">
+			<ul data-role="listview">
+			   <li data-icon="home"><a href="./../../index.html">Home</a></li>
+			   <li data-icon="search" data-theme="a"><a href="./../../artikel/index.html" data-ajax="false">Erkrankungen</a></li>
+			   <li data-role="list-divider"></li>
+			   <li><a href="./../../einleitung/haut/index.html" data-ajax="false">Die Haut unser gr&ouml;&szlig;tes Organ</a></li>
+			   <li><a href="./../../einleitung/exanthem/index.html" data-ajax="false">Exanthem und Effloreszenzen</a></li>
+			   <li><a href="./../../einleitung/primaer/index.html" data-ajax="false">Prim&auml;reffloreszenzen</a></li>
+			   <li><a href="./../../einleitung/sekundaer/index.html" data-ajax="false">Sekund&auml;reffloreszenzen</a></li>
+			   <li><a href="./../../einleitung/aspekte/index.html" data-ajax="false">Klinische Aspekte</a></li>
+			   <li><a href="./../../einleitung/befunde/index.html" data-ajax="false">Klinische Befunde</a></li>
+			   <li><a href="./../../einleitung/verantwortung/index.html" data-ajax="false">&Auml;rztliche Verantwortung</a></li>
+			</ul>
+		</div><!-- /panel -->
+	</div><!-- /content -->
 </div><!-- /page -->
 </body>
 </html>
